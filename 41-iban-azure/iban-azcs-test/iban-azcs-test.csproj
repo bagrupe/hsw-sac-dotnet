@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>sac1_iban_azcs_test</RootNamespace>
+    <RootNamespace>HSW</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\iban-azcs\sac1-iban-azcs.csproj" />
+    <ProjectReference Include="..\iban-azcs\iban-azcs.csproj" />
   </ItemGroup>
 
 </Project>
