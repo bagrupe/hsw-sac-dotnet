@@ -26,18 +26,22 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "sac1_iban_aspx v1"));
+            app.UseSwagger(c => c.RouteTemplate = "iban/swagger/{documentName}/swagger.json");
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/iban/swagger/v1/swagger.json", "sac1_iban_aspx v1");
+                c.RoutePrefix = "iban/swagger";
+            });
         }
 
         //app.UseHttpsRedirection();
 
         app.UseCors(builder =>
-                          {
-                              builder.AllowAnyOrigin();
-                              builder.AllowAnyHeader();
-                              builder.AllowAnyMethod();
-                          });
+                        {
+                            builder.AllowAnyOrigin();
+                            builder.AllowAnyHeader();
+                            builder.AllowAnyMethod();
+                        });
 
         app.UseRouting();
 
