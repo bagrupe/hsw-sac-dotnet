@@ -1,4 +1,4 @@
-# hsw-swa-java
+# hsw-sac-dotnet
 
 # Hochschule Weserbergland - Skalierbare Anwendungen in der Cloud - .net
 
