@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HSW.Controllers;
 [ApiController]
-[Route("api")]
+[Route("api/customer")]
 public class CustomerController : ControllerBase
 {
     private readonly ILogger<CustomerController> _logger;

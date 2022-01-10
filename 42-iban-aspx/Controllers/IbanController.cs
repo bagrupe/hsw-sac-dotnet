@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HSW.Controllers;
 [ApiController]
-[Route("api")]
+[Route("api/iban")]
 public class IbanController : ControllerBase
 {
     private readonly ILogger<IbanController> _logger;
