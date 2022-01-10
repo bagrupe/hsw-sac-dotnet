@@ -50,4 +50,14 @@ Set-Location "$PSScriptRoot/45-customer-aspx"
 & dotnet restore
 & dotnet build
 
+Set-Location "$PSScriptRoot/51-yarp-iban"
+
+& dotnet restore
+& dotnet build
+
+Set-Location "$PSScriptRoot/52-yarp-customer"
+
+& dotnet restore
+& dotnet build
+
 Set-Location $location
