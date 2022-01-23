@@ -60,4 +60,9 @@ Set-Location "$PSScriptRoot/52-yarp-customer"
 & dotnet restore
 & dotnet build
 
+Set-Location "$PSScriptRoot/53-metrics"
+
+& dotnet restore
+& dotnet build
+
 Set-Location $location
