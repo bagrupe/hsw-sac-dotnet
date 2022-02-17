@@ -6,11 +6,14 @@ COPY *.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY HSW ./
+COPY Controllers ./
+COPY DTOs ./
+COPY Utils ./
+COPY *.cs ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "sac1-customer-aspx.dll"]
+ENTRYPOINT ["dotnet", "sac1-iban-aspx.dll"]
